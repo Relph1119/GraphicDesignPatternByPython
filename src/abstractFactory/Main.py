@@ -33,7 +33,7 @@ def main():
     page.output()
 
 def usage():
-    print("Usage: {0} module.name class.name.of.ConcreteFactory".format(sys.argv[0]))
+    print("Usage: python {0} module.name class.name.of.ConcreteFactory".format(sys.argv[0]))
     print("Example 1: python Main.py abstractFactory.listfactory.ListFactory ListFactory")
     print("Example 1: python Main.py abstractFactory.tablefactory.TableFactory TableFactory")
     sys.exit(0)

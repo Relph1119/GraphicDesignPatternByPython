@@ -21,7 +21,7 @@ def main():
         print("{0}文件编写完成。".format(filename))
 
 def usage():
-    print("Usage: {0} plain 编写纯文本文档".format(sys.argv[0]))
+    print("Usage: python {0} plain 编写纯文本文档".format(sys.argv[0]))
     sys.exit(0)
 
 main()
