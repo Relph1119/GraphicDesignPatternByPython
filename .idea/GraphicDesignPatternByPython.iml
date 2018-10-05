@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/singleton" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/strategy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/templateMethod" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/decorator" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (GraphicDesignPatternByPython)" jdkType="Python SDK" />
