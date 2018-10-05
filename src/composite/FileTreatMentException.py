@@ -1,0 +1,2 @@
+class FileTreatMentException(Exception):
+    pass
