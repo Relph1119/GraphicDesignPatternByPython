@@ -6,6 +6,7 @@
         <list>
           <option value="adapter.PrintBanner.Print" />
           <option value="adapter.Main.*" />
+          <option value="Context.__builtin__" />
         </list>
       </option>
     </inspection_tool>
