@@ -55,7 +55,7 @@ class CanvasFrame(tkinter.Frame):
         cmd.execute()
 
 application = tkinter.Tk()
-application.title("State Samlpe")
+application.title("Command Pattern Samlpe")
 window = CanvasFrame(application)
 application.protocol("WM_DELETE_WINDOW", window.quit)
 application.mainloop()
