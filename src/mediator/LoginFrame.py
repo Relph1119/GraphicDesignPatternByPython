@@ -39,8 +39,8 @@ class Main(tkinter.Frame, Mediator):
         self.textPassword.bind("<Key>", self.colleagueChanged)
 
     def createColleagues(self):
-        self.checkGuest = ColleagueRadiobutton("Guest", self.checkValue)
-        self.checkLogin = ColleagueRadiobutton("Login", self.checkValue)
+        self.checkGuest = ColleagueRadiobutton(self, "Guest", self.checkValue)
+        self.checkLogin = ColleagueRadiobutton(self, "Login", self.checkValue)
         self.usernameLabel = tkinter.Label(self, text="Username:", anchor=tkinter.W, underline=0)
         self.textUser = ColleagueEntry(self, 10)
         self.passwordLabel = tkinter.Label(self, text="Password:", anchor=tkinter.W, underline=0)
