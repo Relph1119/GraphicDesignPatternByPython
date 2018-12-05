@@ -11,7 +11,4 @@ class StringDisplay(Display):
         return 1
 
     def getRowText(self, row):
-        if row == 0:
-            return self.string
-        else:
-            return None
+        return self.string if row == 0 else None

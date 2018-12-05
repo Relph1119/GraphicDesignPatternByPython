@@ -10,8 +10,8 @@ class ListPage(Page):
         buffer += "<body>\n"
         buffer += "<h1>{0}</h1>\n".format(self.title)
         buffer += "<ul>\n"
-        for i in range(len(self.content)):
-            buffer += self.content[i].makeHTML()
+        for _, content in enumerate(self.content):
+            buffer += content.makeHTML()
         buffer += "</ul>\n"
         buffer += "<hr><address>{0}</address>".format(self.author)
         buffer += "</body></html>\n"

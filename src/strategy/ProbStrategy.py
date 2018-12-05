@@ -16,7 +16,6 @@ class ProbStrategy(Strategy):
 
     def nextHand(self):
         bet = random.randint(0, self.getSum(self.currentHandValue))
-        handvalue = 0;
         if bet < self.history[self.currentHandValue][0]:
             handvalue = 0
         elif bet < self.history[self.currentHandValue][0] + self.history[self.currentHandValue][1]:

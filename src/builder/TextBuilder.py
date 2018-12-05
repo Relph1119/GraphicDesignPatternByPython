@@ -14,8 +14,8 @@ class TextBuilder(Builder):
         self.buffer += "\n"
 
     def makeItems(self, items):
-        for i in range(len(items)):
-            self.buffer += "  · " + items[i] + "\n"
+        for _, item in enumerate(items):
+            self.buffer += "  · " + item + "\n"
         self.buffer += "\n"
 
     def close(self):

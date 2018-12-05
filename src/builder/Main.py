@@ -24,4 +24,5 @@ def usage():
     print("Usage: python {0} plain 编写纯文本文档".format(sys.argv[0]))
     sys.exit(0)
 
-main()
+if __name__ == '__main__':
+    main()

@@ -12,13 +12,14 @@ def clockStart(window):
             else:
                 break
 
-isRunning = True
-application = tkinter.Tk()
-application.title("State Samlpe")
-window = SafeFrame(application, isRunning)
+if __name__ == '__main__':
+    isRunning = True
+    application = tkinter.Tk()
+    application.title("State Samlpe")
+    window = SafeFrame(application, isRunning)
 
-timer = Timer(2, clockStart, args=(window,))
-timer.start()
+    timer = Timer(2, clockStart, args=(window,))
+    timer.start()
 
-application.protocol("WM_DELETE_WINDOW", window.quit)
-application.mainloop()
+    application.protocol("WM_DELETE_WINDOW", window.quit)
+    application.mainloop()

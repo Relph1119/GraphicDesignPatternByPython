@@ -10,8 +10,8 @@ class TablePage(Page):
         buffer += "<body>\n"
         buffer += "<h1>{0}</h1>\n".format(self.title)
         buffer += "<table width=\"80%\" horder=\"3\">\n"
-        for i in range(len(self.content)):
-            buffer += "<tr>{0}</tr>".format(self.content[i].makeHTML())
+        for _, content in enumerate(self.content):
+            buffer += "<tr>{0}</tr>".format(content.makeHTML())
         buffer += "</table>\n"
         buffer += "<hr><address>{0}</address>".format(self.author)
         buffer += "</body></html>\n"

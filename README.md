@@ -121,6 +121,7 @@ images-------------------------------------运行结果截图
 3. 对于Facade模式中的读取maildata.txt文件，由于Python没有Java Properties的类，笔者参照网上的方法，自己实现了一个。
 4. 对于Interpreter模式中词分处理，由于没有Java StringTokenizer类，笔者直接在Context中实现了该类的方法。
 5. 其中的几个GUI编程，采用的是Python自带的tkinter包，目前已经熟练使用Text, Button, Canvas, Label, Entry等控件。
+6. 2018年12月5日 按照Effective Python中的进行代码优化。
 
 ## 编程时的Tips ##
 1. 对于Python的循环继承的处理，可以所用到的方法内声明导入类。

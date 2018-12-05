@@ -38,5 +38,5 @@ def usage():
     print("Example 1: python Main.py abstractFactory.tablefactory.TableFactory TableFactory")
     sys.exit(0)
 
-main()
-
+if __name__ == '__main__':
+    main()

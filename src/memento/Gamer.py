@@ -27,10 +27,9 @@ class Gamer:
 
     def createMemento(self):
         m = Memento(self.money)
-        for i in range(len(self.fruits)):
-            f = self.fruits[i]
-            if f.startswith("好吃的"):
-                m.addFruit(f)
+        for _, fruit in enumerate(self.fruits):
+            if fruit.startswith("好吃的"):
+                m.addFruit(fruit)
         return m
 
     def restoreMomento(self, memento):
@@ -42,6 +41,6 @@ class Gamer:
 
     def __getFruit(self):
         prefix = ""
-        if random.randint(1,2) == True:
+        if random.choice([True, False]):
             prefix = "好吃的"
         return prefix + self.fruitsname[random.randint(0, len(self.fruitsname)-1)]

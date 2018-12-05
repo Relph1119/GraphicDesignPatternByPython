@@ -8,7 +8,7 @@ class PrinterProxy(Printable):
         self.real = None
 
     def setPrinterName(self, name):
-        if self.real is not None:
+        if self.real:
             self.real.setPrinterName(name)
         self.name = name
 
@@ -20,5 +20,5 @@ class PrinterProxy(Printable):
         self.real.print(string)
 
     def realize(self):
-        if self.real is None:
+        if not self.real:
             self.real = Printer(self.name)

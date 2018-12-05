@@ -1,21 +1,23 @@
 from Gamer import Gamer
 import time
 
-gamer = Gamer(100)
-memento = gamer.createMemento()
-for i in range(100):
-    print("==== {0}".format(i))
-    print("当前状态：{0}".format(gamer))
+if __name__ == '__main__':
 
-    gamer.bet()
+    gamer = Gamer(100)
+    memento = gamer.createMemento()
+    for i in range(100):
+        print("==== {0}".format(i))
+        print("当前状态：{0}".format(gamer))
 
-    print("所持金钱为 {0} 元".format(gamer.getMoney()))
+        gamer.bet()
 
-    if gamer.getMoney() > memento.getMoney():
-        print("     (所持金钱增加了许多，因此保存游戏的当前的状态)")
-        memento = gamer.createMemento()
-    elif gamer.getMoney() < memento.getMoney() / 2:
-        print("     (所持金钱减少了许多，因此将游戏恢复至以前的状态)")
-        gamer.restoreMomento(memento)
+        print("所持金钱为 {0} 元".format(gamer.getMoney()))
 
-    time.sleep(1)
+        if gamer.getMoney() > memento.getMoney():
+            print("     (所持金钱增加了许多，因此保存游戏的当前的状态)")
+            memento = gamer.createMemento()
+        elif gamer.getMoney() < memento.getMoney() / 2:
+            print("     (所持金钱减少了许多，因此将游戏恢复至以前的状态)")
+            gamer.restoreMomento(memento)
+
+        time.sleep(1)

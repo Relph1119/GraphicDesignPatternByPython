@@ -3,7 +3,6 @@ from state.DayState import DayState
 from state.Context import Context
 from tkinter.scrolledtext import ScrolledText
 
-
 class SafeFrame(tkinter.Frame, Context):
     def __init__(self, parent, isRunning):
         super().__init__(parent)
@@ -29,8 +28,6 @@ class SafeFrame(tkinter.Frame, Context):
         self.buttonUse.bind("<Button-1>", self.useEvent)
         self.buttonAlarm.bind("<Button-1>", self.useAlarm)
         self.buttonPhone.bind("<Button-1>", self.usePhone)
-
-        #self.after(1000, self.clockStart)
 
     def quit(self, event=None):
         self.isRunning = False
@@ -70,11 +67,3 @@ class SafeFrame(tkinter.Frame, Context):
         self.textScreen.insert(tkinter.END, "{0} record... {1}\n".format(self.clockstring, msg))
         self.textScreen.see(tkinter.END)
         self.textScreen["state"] = tkinter.DISABLED
-
-
-
-
-
-
-
-

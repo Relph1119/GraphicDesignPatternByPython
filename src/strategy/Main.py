@@ -35,4 +35,5 @@ def usage():
     print("Example: python Main.py 314 15")
     sys.exit(0)
 
-main()
+if __name__ == '__main__':
+    main()

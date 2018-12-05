@@ -69,9 +69,10 @@ class Main(tkinter.Frame):
     def quit(self, event=None):
         self.parent.destroy()
 
-application = tkinter.Tk()
-application.title("Mediator Sample")
-window = Main(application)
-application.protocol("WM_DELETE_WINDOW", window.quit)
-application.mainloop()
+if __name__ == '__main__':
+    application = tkinter.Tk()
+    application.title("Mediator Sample")
+    window = Main(application)
+    application.protocol("WM_DELETE_WINDOW", window.quit)
+    application.mainloop()
 

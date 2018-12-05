@@ -16,8 +16,8 @@ class ListTray(Tray):
         buffer += "<li>\n"
         buffer += self.caption + "\n"
         buffer += "<ul>\n"
-        for i in range(len(self.tray)):
-            buffer += self.tray[i].makeHTML()
+        for _, tray in enumerate(self.tray):
+            buffer += tray.makeHTML()
         buffer += "</ul>\n"
         buffer += "</li>\n"
         return buffer

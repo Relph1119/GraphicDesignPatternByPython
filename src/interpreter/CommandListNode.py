@@ -20,11 +20,4 @@ class CommandListNode(Node):
                 self.list.append(command_node.__str__())
 
     def __str__(self):
-        buf = ""
-        buf += "["
-        for i in range(len(self.list)):
-            buf += self.list[i]
-            if i < len(self.list) - 1:
-                buf += ", "
-        buf += "]"
-        return buf
+        return "[" + " ".join(self.list) + "]"

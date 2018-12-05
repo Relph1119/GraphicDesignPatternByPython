@@ -11,8 +11,8 @@ class NumberGenerator(metaclass=ABCMeta):
         self.observers.remove(observer)
 
     def notifyObservers(self):
-        for i in range(len(self.observers)):
-            self.observers[i].update(self)
+        for _, observer in enumerate(self.observers):
+            observer.update(self)
 
     @abstractstaticmethod
     def getNumber(self):

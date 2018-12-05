@@ -1,3 +1,4 @@
 from facade.PageMaker import PageMaker
 
-PageMaker.makeWelcomePage("hyuki@hyuki.com", "welcome.html")
+if __name__ == '__main__':
+    PageMaker.makeWelcomePage("hyuki@hyuki.com", "welcome.html")

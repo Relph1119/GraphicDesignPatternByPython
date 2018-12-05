@@ -13,8 +13,8 @@ class HTMLBuilder(Builder):
 
     def makeItems(self, items):
         self.file.write("<ul>\n")
-        for i in range(len(items)):
-            self.file.write("<li>{0}</li>\n".format(items[i]))
+        for _, item in enumerate(items):
+            self.file.write("<li>{0}</li>\n".format(item))
         self.file.write("</ul>\n")
 
     def close(self):

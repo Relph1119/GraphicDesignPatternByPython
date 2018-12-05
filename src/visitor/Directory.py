@@ -9,9 +9,9 @@ class Directory(Entry):
         return self.name
 
     def getSize(self):
-        size = 0;
-        for i in range(len(self.dir)):
-            size += self.dir[i].getSize()
+        size = 0
+        for _, dir in enumerate(self.dir):
+            size += dir.getSize()
         return size
 
     def add(self, entry):

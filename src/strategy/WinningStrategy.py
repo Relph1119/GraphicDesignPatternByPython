@@ -11,7 +11,7 @@ class WinningStrategy(Strategy):
     won = False
 
     def nextHand(self):
-        if self.won != True :
+        if not self.won:
             randomInt = random.randint(0, 2)
             self.prevHand = Hand.get_hand(randomInt)
         return self.prevHand

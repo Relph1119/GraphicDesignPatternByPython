@@ -54,8 +54,9 @@ class CanvasFrame(tkinter.Frame):
         self.history.append(cmd)
         cmd.execute()
 
-application = tkinter.Tk()
-application.title("Command Pattern Samlpe")
-window = CanvasFrame(application)
-application.protocol("WM_DELETE_WINDOW", window.quit)
-application.mainloop()
+if __name__ == '__main__':
+    application = tkinter.Tk()
+    application.title("Command Pattern Samlpe")
+    window = CanvasFrame(application)
+    application.protocol("WM_DELETE_WINDOW", window.quit)
+    application.mainloop()

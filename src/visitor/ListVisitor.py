@@ -14,7 +14,7 @@ class ListVisitor(Visitor):
             print("{0}/{1}".format(self.currentdir, entry))
             savedir = self.currentdir
             self.currentdir = "{0}/{1}".format(self.currentdir, entry.getName())
-            for i in range(len(entry.dir)):
-                entry.dir[i].accept(self)
+            for _, dir in enumerate(entry.dir):
+                dir.accept(self)
             self.currentdir = savedir
 

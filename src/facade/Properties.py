@@ -28,37 +28,39 @@ class Properties:
 
     def put(self, key, value):
         self.properties[key] = value
-        self.replace_property(self.file_name, key + '=.*', key + '=' + value, True)
+        self.__replace_property(self.file_name, key + '=.*', key + '=' + value, True)
+
+    @staticmethod
+    def __replace_property(file_name, from_regex, to_str, append_on_not_exists=True):
+        tmpfile = tempfile.TemporaryFile()
+
+        if os.path.exists(file_name):
+            r_open = open(file_name, 'r')
+            pattern = re.compile(r'' + from_regex)
+            found = None
+            for line in r_open:
+                if pattern.search(line) and not line.strip().startswith('#'):
+                    found = True
+                    line = re.sub(from_regex, to_str, line)
+                tmpfile.write(line)
+            if not found and append_on_not_exists:
+                tmpfile.write('\n' + to_str)
+            r_open.close()
+            tmpfile.seek(0)
+
+            content = tmpfile.read()
+
+            if os.path.exists(file_name):
+                os.remove(file_name)
+
+            w_open = open(file_name, 'w')
+            w_open.write(content)
+            w_open.close()
+
+            tmpfile.close()
+        else:
+            print("file {0} not found".format(file_name))
 
 def parse(file_name):
     return Properties(file_name)
 
-def replace_property(file_name, from_regex, to_str, append_on_not_exists=True):
-    tmpfile = tempfile.TemporaryFile()
-
-    if os.path.exists(file_name):
-        r_open = open(file_name, 'r')
-        pattern = re.compile(r'' + from_regex)
-        found = None
-        for line in r_open:
-            if pattern.search(line) and not line.strip().startswith('#'):
-                found = True
-                line = re.sub(from_regex, to_str, line)
-            tmpfile.write(line)
-        if not found and append_on_not_exists:
-            tmpfile.write('\n' + to_str)
-        r_open.close()
-        tmpfile.seek(0)
-
-        content = tmpfile.read()
-
-        if os.path.exists(file_name):
-            os.remove(file_name)
-
-        w_open = open(file_name, 'w')
-        w_open.write(content)
-        w_open.close()
-
-        tmpfile.close()
-    else:
-        print("file {0} not found".format(file_name))

@@ -18,8 +18,8 @@ class TableTray(Tray):
         buffer += "<td bgcolor=\"#cccccc\" align=\"center\" colspan=\"{0}\"><b>{1}</b></td>".format(len(self.tray), self.caption)
         buffer += "<tr>\n"
         buffer += "<tr>\n"
-        for i in range(len(self.tray)):
-            buffer += self.tray[i].makeHTML()
+        for _, tray in enumerate(self.tray):
+            buffer += tray.makeHTML()
         buffer += "</tr></table>"
         buffer += "</td>"
         return buffer

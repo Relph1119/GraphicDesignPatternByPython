@@ -1,5 +1,6 @@
 from PrintBanner import PrintBanner
 
-p = PrintBanner("Hello")
-p.print_weak()
-p.print_strong()
+if __name__ == '__main__':
+    p = PrintBanner("Hello")
+    p.print_weak()
+    p.print_strong()

@@ -3,11 +3,11 @@ import time
 
 class Printer(Printable):
     def __init__(self, name=None):
-        if name is not None:
+        if name:
             self.name = name
             self.__heavyJob("正在生成Printer的实例({0})".format(self.name))
         else:
-            self.__heavyJob("正在生成Printer的实例");
+            self.__heavyJob("正在生成Printer的实例")
 
     def setPrinterName(self, name):
         self.name = name

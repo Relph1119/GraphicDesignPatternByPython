@@ -11,7 +11,7 @@ class Page(metaclass=ABCMeta):
 
     def output(self):
         filename = self.title + ".html"
-        file = open(filename, "w", encoding="utf8")
+        file = open(filename, "w", encoding="gbk")
         file.write(self.makeHTML())
         file.close()
         print("{0}编写完成。".format(filename))

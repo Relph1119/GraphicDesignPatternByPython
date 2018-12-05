@@ -1,4 +1,5 @@
 from BigString import BigString
 
-bs = BigString("1212123")
-bs.print()
+if __name__ == '__main__':
+    bs = BigString("1212123")
+    bs.print()
