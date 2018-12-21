@@ -1,4 +1,4 @@
-class BigChar():
+class BigChar:
     def __init__(self, charname):
         self.charname = charname
         self.fontdata = ""

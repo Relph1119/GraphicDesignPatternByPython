@@ -1,6 +1,7 @@
 from framework.Factory import Factory
 from idcard.IDCard import IDCard
 
+
 class IDCardFactory(Factory):
     def __init__(self):
         self.owners = set()
@@ -10,4 +11,3 @@ class IDCardFactory(Factory):
 
     def register_product(self, product):
         self.owners.add(product.owner)
-    

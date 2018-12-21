@@ -1,5 +1,6 @@
 from Entry import Entry
 
+
 class File(Entry):
     def __init__(self, name, size):
         self.name = name

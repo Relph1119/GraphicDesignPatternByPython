@@ -26,5 +26,3 @@ class Player:
     def __str__(self):
         return "[{0}:{1} games, {2} win, {3} lose]"\
             .format(self.name, self.gamecount, self.wincount, self.losecount)
-
-    

@@ -1,15 +1,15 @@
-from abc import ABCMeta, abstractclassmethod
 import copy
 
-class Product(metaclass=ABCMeta):
 
-    @abstractclassmethod
-    def use(self, s):
-        pass
+class Product(object):
 
-    @abstractclassmethod
-    def create_clone(self):
-        pass
+    @classmethod
+    def use(cls, s):
+        raise NotImplementedError
+
+    @classmethod
+    def create_clone(cls):
+        raise NotImplementedError
 
     def clone(self, p):
         obj = copy.deepcopy(p)

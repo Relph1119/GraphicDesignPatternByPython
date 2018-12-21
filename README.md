@@ -122,6 +122,7 @@ images-------------------------------------运行结果截图
 4. 对于Interpreter模式中词分处理，由于没有Java StringTokenizer类，笔者直接在Context中实现了该类的方法。
 5. 其中的几个GUI编程，采用的是Python自带的tkinter包，目前已经熟练使用Text, Button, Canvas, Label, Entry等控件。
 6. 2018年12月5日 按照Effective Python中的进行代码优化。
+7. 2018年12月21日 按照PEP8 进行代码优化。
 
 ## 编程时的Tips ##
 1. 对于Python的循环继承的处理，可以所用到的方法内声明导入类。
@@ -134,13 +135,12 @@ images-------------------------------------运行结果截图
         return factory
 </pre>
 3. Python中并没有接口类的概念，由于可以多重继承，可采用以下代码实现<pre>
-    from abc import ABCMeta, abstractclassmethod
-    class Print(metaclass=ABCMeta):
-        @abstractclassmethod
-        def print_weak(self):
+    class Print(object):
+        @classmethod
+        def print_weak(cls):
             pass
-        @abstractclassmethod
-        def print_strong(self):
+        @classmethod
+        def print_strong(cls):
             pass
 </pre>
 4. 在主程序内开启子线程，退出主程序之后，子线程依然会执行，可以采用标志位判断之后break，退出子线程，可参考State模式的示例代码。<br/>

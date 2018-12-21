@@ -1,6 +1,9 @@
 from Builder import Builder
 
+
 class HTMLBuilder(Builder):
+    filename = None
+    file = None
 
     def makeTitle(self, title):
         self.filename = title

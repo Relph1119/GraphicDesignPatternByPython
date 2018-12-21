@@ -1,16 +1,14 @@
-from abc import ABCMeta, abstractclassmethod
-
-class Factory(metaclass=ABCMeta):
+class Factory(object):
     
     def create(self, owner):
         p = self.create_product(owner)
         self.register_product(p)
         return p
 
-    @abstractclassmethod
-    def create_product(self, owner):
-        pass
+    @classmethod
+    def create_product(cls, owner):
+        raise NotImplementedError
 
-    @abstractclassmethod
-    def register_product(self, product):
-        pass
+    @classmethod
+    def register_product(cls, product):
+        raise NotImplementedError

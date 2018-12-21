@@ -3,6 +3,7 @@ from TextBuilder import TextBuilder
 from HTMLBuilder import HTMLBuilder
 from Director import Director
 
+
 def main():
     if len(sys.argv) != 2:
         usage()
@@ -20,9 +21,11 @@ def main():
         filename = htmlbuilder.get_result()
         print("{0}文件编写完成。".format(filename))
 
+
 def usage():
     print("Usage: python {0} plain 编写纯文本文档".format(sys.argv[0]))
     sys.exit(0)
+
 
 if __name__ == '__main__':
     main()

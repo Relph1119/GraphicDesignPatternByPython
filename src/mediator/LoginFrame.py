@@ -2,6 +2,7 @@ import tkinter
 from mediator.ConcreteColleague import ColleagueButton, ColleagueEntry, ColleagueRadiobutton
 from mediator.Mediator import Mediator
 
+
 class Main(tkinter.Frame, Mediator):
 
     def __init__(self, parent):
@@ -13,22 +14,14 @@ class Main(tkinter.Frame, Mediator):
 
         self.createColleagues()
 
-        self.checkGuest.grid(row=0, column=0, padx=2, pady=2,
-                            sticky=tkinter.W)
-        self.checkLogin.grid(row=0, column=1, padx=2, pady=2,
-                            sticky=tkinter.EW)
-        self.usernameLabel.grid(row=1, column=0, padx=2, pady=2,
-                       sticky=tkinter.W)
-        self.textUser.grid(row=1, column=1, padx=2, pady=2,
-                       sticky=tkinter.EW)
-        self.passwordLabel.grid(row=2, column=0, padx=2, pady=2,
-                        sticky=tkinter.W)
-        self.textPassword.grid(row=2, column=1, padx=2, pady=2,
-                        sticky=tkinter.EW)
-        self.buttonOk.grid(row=3, column=0, padx=2, pady=2,
-                         sticky=tkinter.EW)
-        self.buttonCancel.grid(row=3, column=1, padx=2, pady=2,
-                               sticky=tkinter.EW)
+        self.checkGuest.grid(row=0, column=0, padx=2, pady=2, sticky=tkinter.W)
+        self.checkLogin.grid(row=0, column=1, padx=2, pady=2, sticky=tkinter.EW)
+        self.usernameLabel.grid(row=1, column=0, padx=2, pady=2, sticky=tkinter.W)
+        self.textUser.grid(row=1, column=1, padx=2, pady=2, sticky=tkinter.EW)
+        self.passwordLabel.grid(row=2, column=0, padx=2, pady=2, sticky=tkinter.W)
+        self.textPassword.grid(row=2, column=1, padx=2, pady=2, sticky=tkinter.EW)
+        self.buttonOk.grid(row=3, column=0, padx=2, pady=2, sticky=tkinter.EW)
+        self.buttonCancel.grid(row=3, column=1, padx=2, pady=2, sticky=tkinter.EW)
 
         self.checkGuest.focus_set()
 
@@ -58,7 +51,7 @@ class Main(tkinter.Frame, Mediator):
         self.checkGuest.setColleagueEnable(True)
         self.checkLogin.setColleagueEnable(False)
 
-    def colleagueChanged(self, event):
+    def colleagueChanged(self):
         if self.checkValue == "Guest":
             self.textUser["state"] = "disable"
             self.textPassword["state"] = "disable"
@@ -81,9 +74,9 @@ class Main(tkinter.Frame, Mediator):
     def quit(self, event=None):
         self.parent.destroy()
 
+
 application = tkinter.Tk()
 application.title("Mediator Sample")
 window = Main(application)
 application.protocol("WM_DELETE_WINDOW", window.quit)
 application.mainloop()
-

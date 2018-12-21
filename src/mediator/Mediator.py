@@ -1,11 +1,8 @@
-from abc import ABCMeta, abstractstaticmethod
+class Mediator(object):
+    @classmethod
+    def createColleagues(cls):
+        raise NotImplementedError
 
-class Mediator(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def createColleagues(self):
-        pass
-
-    @abstractstaticmethod
-    def colleagueChanged(self, event=None):
-        pass
-    
+    @classmethod
+    def colleagueChanged(cls):
+        raise NotImplementedError

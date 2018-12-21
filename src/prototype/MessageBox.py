@@ -1,5 +1,6 @@
 from prototype.framework.Product import Product
 
+
 class MessageBox(Product):
     def __init__(self, decochar):
         self.decochar = decochar
@@ -16,4 +17,3 @@ class MessageBox(Product):
 
     def create_clone(self):
         return self.clone(self)
-

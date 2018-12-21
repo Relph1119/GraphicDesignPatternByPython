@@ -1,6 +1,7 @@
 from Printable import Printable
 import time
 
+
 class Printer(Printable):
     def __init__(self, name=None):
         if name:
@@ -15,7 +16,7 @@ class Printer(Printable):
     def getPrinterName(self):
         return self.name
 
-    def print(self,string):
+    def print(self, string):
         print("=== {0} ===".format(self.name))
         print(string)
 
@@ -25,5 +26,3 @@ class Printer(Printable):
             time.sleep(1)
             print(".", end='')
         print("结束。")
-
-

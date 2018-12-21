@@ -1,6 +1,5 @@
-from abc import ABCMeta, abstractclassmethod
+class Aggregate(object):
 
-class Aggregate(metaclass=ABCMeta):
-    @abstractclassmethod
-    def iterator(self):
-        pass
+    @classmethod
+    def iterator(cls):
+        raise NotImplementedError

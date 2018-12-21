@@ -1,5 +1,6 @@
 from interpreter.Node import Node
 
+
 class CommandNode(Node):
     def __init__(self):
         self.node = None

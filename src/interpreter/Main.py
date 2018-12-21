@@ -12,4 +12,3 @@ if __name__ == '__main__':
         node.parse(Context(line))
         print("node = {0}".format(node))
     file.close()
-

@@ -3,6 +3,7 @@ from WinningStrategy import WinningStrategy
 from ProbStrategy import ProbStrategy
 import sys
 
+
 def main():
     if len(sys.argv) != 3:
         usage()
@@ -30,10 +31,12 @@ def main():
     print(player1)
     print(player2)
 
+
 def usage():
     print("Usage: python {0} randomseed1 randomseed2".format(sys.argv[0]))
     print("Example: python Main.py 314 15")
     sys.exit(0)
+
 
 if __name__ == '__main__':
     main()

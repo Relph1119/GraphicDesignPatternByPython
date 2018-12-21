@@ -1,5 +1,6 @@
 from command.Command import Command
 
+
 class MacroCommand(Command):
     def __init__(self):
         self.commands = list()

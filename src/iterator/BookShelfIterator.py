@@ -1,5 +1,6 @@
 from Iterator import Iterator
 
+
 class BookShelfIterator(Iterator):
     def __init__(self, bookshelf):
         self.index = 0

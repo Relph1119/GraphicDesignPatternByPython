@@ -1,5 +1,6 @@
 from AbstractDisplay import AbstractDisplay
 
+
 class CharDisplay(AbstractDisplay):
     def __init__(self, ch):
         self.ch = ch

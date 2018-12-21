@@ -1,6 +1,4 @@
-from abc import ABCMeta, abstractstaticmethod
-
-class Observer(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def update(self, generator):
-        pass
+class Observer(object):
+    @classmethod
+    def update(cls, generator):
+        raise NotImplementedError

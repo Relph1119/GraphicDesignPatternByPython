@@ -1,6 +1,7 @@
 from BigChar import BigChar
 
-class BigCharFactory():
+
+class BigCharFactory:
     pool = {}
 
     def __new__(cls, *args, **kwargs):

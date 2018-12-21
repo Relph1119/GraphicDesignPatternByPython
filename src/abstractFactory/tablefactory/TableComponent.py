@@ -1,11 +1,13 @@
 from abstractFactory.factory.Component import Link, Tray
 
+
 class TableLink(Link):
     def __init__(self, caption, url):
         super(TableLink, self).__init__(caption, url)
 
     def makeHTML(self):
         return "<td><a href=\"{0}\">{1}</a></td>\n".format(self.url, self.caption)
+
 
 class TableTray(Tray):
     def __init__(self, caption):
@@ -23,5 +25,3 @@ class TableTray(Tray):
         buffer += "</tr></table>"
         buffer += "</td>"
         return buffer
-
-

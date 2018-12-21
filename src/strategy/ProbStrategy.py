@@ -2,6 +2,7 @@ from Strategy import Strategy
 import random
 from Hand import Hand
 
+
 class ProbStrategy(Strategy):
     def __init__(self, seed):
         random.seed(seed)
@@ -36,5 +37,5 @@ class ProbStrategy(Strategy):
         if win:
             self.history[self.prevHandValue][self.currentHandValue] += 1
         else:
-            self.history[self.prevHandValue][(self.currentHandValue + 1) %3 ] += 1
-            self.history[self.prevHandValue][(self.currentHandValue + 2) %3 ] += 1
+            self.history[self.prevHandValue][(self.currentHandValue + 1) % 3] += 1
+            self.history[self.prevHandValue][(self.currentHandValue + 2) % 3] += 1

@@ -1,5 +1,6 @@
 from DisplayImpl import DisplayImpl
 
+
 class StringDisplayImpl(DisplayImpl):
     def __init__(self, string):
         self.string = string
@@ -17,5 +18,5 @@ class StringDisplayImpl(DisplayImpl):
     def printLine(self):
         print("+", end='')
         for i in range(self.width):
-            print("-" ,end='')
+            print("-", end='')
         print("+")

@@ -1,5 +1,6 @@
 from visitor.Entry import Entry
 
+
 class Directory(Entry):
     def __init__(self, name):
         self.dir = list()

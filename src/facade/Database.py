@@ -1,5 +1,6 @@
 import facade.Properties as properties
 
+
 class Database:
     @staticmethod
     def getProperties(dbname):

@@ -1,10 +1,8 @@
 from decorator.Display import Display
 from decorator.Border import Border
 
-class FullBorder(Border, Display):
-    def __init__(self, display):
-        self.display = display
 
+class FullBorder(Border, Display):
     def getColumns(self):
         return 1 + self.display.getColumns() + 1
 

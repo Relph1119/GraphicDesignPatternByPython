@@ -1,18 +1,16 @@
-from abc import ABCMeta, abstractstaticmethod
+class State(object):
+    @classmethod
+    def doClouck(cls, context, hour):
+        raise NotImplementedError
 
-class State(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def doClouck(self, context, hour):
-        pass
+    @classmethod
+    def doUse(cls, context):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def doUse(self, context):
-        pass
+    @classmethod
+    def doAlarm(cls, context):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def doAlarm(self, context):
-        pass
-
-    @abstractstaticmethod
-    def doPhone(self, context):
-        pass
+    @classmethod
+    def doPhone(cls, context):
+        raise NotImplementedError

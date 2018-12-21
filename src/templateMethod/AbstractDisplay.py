@@ -1,17 +1,15 @@
-from abc import ABCMeta, abstractclassmethod
+class AbstractDisplay(object):
+    @classmethod
+    def open(cls):
+        raise NotImplementedError
 
-class AbstractDisplay(metaclass=ABCMeta):
-    @abstractclassmethod
-    def open(self):
-        pass
+    @classmethod
+    def print(cls):
+        raise NotImplementedError
 
-    @abstractclassmethod
-    def print(self):
-        pass
-
-    @abstractclassmethod
-    def close(self):
-        pass
+    @classmethod
+    def close(cls):
+        raise NotImplementedError
 
     def display(self):
         self.open()

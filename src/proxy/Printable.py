@@ -1,14 +1,12 @@
-from abc import ABCMeta, abstractstaticmethod
+class Printable(object):
+    @classmethod
+    def setPrinterName(cls, name):
+        raise NotImplementedError
 
-class Printable(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def setPrinterName(self, name):
-        pass
+    @classmethod
+    def getPrinterName(cls):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def getPrinterName(self):
-        pass
-
-    @abstractstaticmethod
-    def print(self,string):
-        pass
+    @classmethod
+    def print(cls, string):
+        raise NotImplementedError

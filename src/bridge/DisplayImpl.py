@@ -1,14 +1,12 @@
-from abc import ABCMeta, abstractclassmethod
+class DisplayImpl(object):
+    @classmethod
+    def rawOpen(cls):
+        raise NotImplementedError
 
-class DisplayImpl(metaclass=ABCMeta):
-    @abstractclassmethod
-    def rawOpen(self):
-        pass
+    @classmethod
+    def rawPrint(cls):
+        raise NotImplementedError
 
-    @abstractclassmethod
-    def rawPrint(self):
-        pass
-
-    @abstractclassmethod
-    def rawClose(self):
-        pass
+    @classmethod
+    def rawClose(cls):
+        raise NotImplementedError

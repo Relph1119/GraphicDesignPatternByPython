@@ -1,6 +1,4 @@
-from abc import ABCMeta, abstractstaticmethod
-
-class NumberGenerator(metaclass=ABCMeta):
+class NumberGenerator(object):
     def __init__(self):
         self.observers = list()
 
@@ -14,10 +12,10 @@ class NumberGenerator(metaclass=ABCMeta):
         for _, observer in enumerate(self.observers):
             observer.update(self)
 
-    @abstractstaticmethod
-    def getNumber(self):
-        pass
+    @classmethod
+    def getNumber(cls):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def execute(self):
-        pass
+    @classmethod
+    def execute(cls):
+        raise NotImplementedError

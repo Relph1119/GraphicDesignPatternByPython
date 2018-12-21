@@ -1,9 +1,10 @@
 from Border import Border
 from decorator.Display import Display
 
+
 class SideBorder(Border, Display):
     def __init__(self, display, ch):
-        super(SideBorder, self).__init__(display)
+        super().__init__(display)
         self.borderChar = ch
 
     def getColumns(self):

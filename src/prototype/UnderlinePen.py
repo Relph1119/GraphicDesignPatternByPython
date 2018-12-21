@@ -1,5 +1,6 @@
 from prototype.framework.Product import Product
 
+
 class UnderlinePen(Product):
     def __init__(self, ulchar):
         self.ulchar = ulchar
@@ -14,4 +15,3 @@ class UnderlinePen(Product):
 
     def create_clone(self):
         return self.clone(self)
-

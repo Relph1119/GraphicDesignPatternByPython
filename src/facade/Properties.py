@@ -2,6 +2,7 @@ import re
 import os
 import tempfile
 
+
 class Properties:
     def __init__(self, file_name):
         self.file_name = file_name
@@ -61,6 +62,6 @@ class Properties:
         else:
             print("file {0} not found".format(file_name))
 
+
 def parse(file_name):
     return Properties(file_name)
-

@@ -1,18 +1,16 @@
-from abc import ABCMeta, abstractclassmethod
+class Builder(object):
+    @classmethod
+    def makeTitle(cls, title):
+        raise NotImplementedError
 
-class Builder(metaclass=ABCMeta):
-    @abstractclassmethod
-    def makeTitle(self, title):
-        pass
+    @classmethod
+    def makeString(cls, str):
+        raise NotImplementedError
 
-    @abstractclassmethod
-    def makeString(self, str):
-        pass
+    @classmethod
+    def makeItems(cls, items):
+        raise NotImplementedError
 
-    @abstractclassmethod
-    def makeItems(self, items):
-        pass
-
-    @abstractclassmethod
-    def close(self):
-        pass
+    @classmethod
+    def close(cls):
+        raise NotImplementedError

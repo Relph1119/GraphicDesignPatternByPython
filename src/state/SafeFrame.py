@@ -3,6 +3,7 @@ from state.DayState import DayState
 from state.Context import Context
 from tkinter.scrolledtext import ScrolledText
 
+
 class SafeFrame(tkinter.Frame, Context):
     def __init__(self, parent, isRunning):
         super().__init__(parent)
@@ -54,7 +55,7 @@ class SafeFrame(tkinter.Frame, Context):
 
     def changeState(self, state):
         print("从{0}状态变为了{1}状态".format(self.state, state))
-        self.state =state
+        self.state = state
 
     def callSecurityCenter(self, msg):
         self.textScreen["state"] = tkinter.NORMAL

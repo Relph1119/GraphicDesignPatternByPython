@@ -1,6 +1,4 @@
-from abc import ABCMeta, abstractclassmethod
-
-class Page(metaclass=ABCMeta):
+class Page(object):
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -16,6 +14,6 @@ class Page(metaclass=ABCMeta):
         file.close()
         print("{0}编写完成。".format(filename))
 
-    @abstractclassmethod
-    def makeHTML(self):
+    @classmethod
+    def makeHTML(cls):
         pass

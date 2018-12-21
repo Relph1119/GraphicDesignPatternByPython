@@ -1,6 +1,5 @@
-from abc import ABCMeta, abstractclassmethod
+class Product(object):
 
-class Product(metaclass=ABCMeta):
-    @abstractclassmethod
-    def use(self):
-        pass
+    @classmethod
+    def use(cls):
+        raise NotImplementedError

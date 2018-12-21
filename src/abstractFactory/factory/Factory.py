@@ -1,7 +1,7 @@
-from abc import ABCMeta, abstractclassmethod
 import importlib
 
-class Factory(metaclass=ABCMeta):
+
+class Factory(object):
 
     @staticmethod
     def get_factory(module_name, class_name):
@@ -10,16 +10,14 @@ class Factory(metaclass=ABCMeta):
         factory = aclass()
         return factory
 
-    @abstractclassmethod
-    def create_link(self, caption, url):
+    @classmethod
+    def create_link(cls, caption, url):
         pass
 
-    @abstractclassmethod
-    def create_tray(self, caption):
+    @classmethod
+    def create_tray(cls, caption):
         pass
 
-    @abstractclassmethod
-    def create_page(self, title, author):
+    @classmethod
+    def create_page(cls, title, author):
         pass
-
-

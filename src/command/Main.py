@@ -2,6 +2,7 @@ import tkinter
 from command.DrawCommand import DrawCommand
 from command.MacroCommand import MacroCommand
 
+
 class CanvasFrame(tkinter.Frame):
     def __init__(self, parent):
         super().__init__(parent)
@@ -31,13 +32,13 @@ class CanvasFrame(tkinter.Frame):
         self.clearButton.bind("<Button-1>", self._clearCanvas)
         self.undoButton.bind("<Button-1>", self._undoCanvas)
 
-    def _redPaint(self,event):
+    def _redPaint(self, event):
         self.paintColor = "red"
 
-    def _greenPaint(self,event):
+    def _greenPaint(self, event):
         self.paintColor = "green"
 
-    def _bluePaint(self,event):
+    def _bluePaint(self, event):
         self.paintColor = "blue"
 
     def _clearCanvas(self, event):
@@ -49,10 +50,11 @@ class CanvasFrame(tkinter.Frame):
         self.canvas.delete(tkinter.ALL)
         self.history.execute()
 
-    def _mouseDragged(self,event):
+    def _mouseDragged(self, event):
         cmd = DrawCommand(self, event, self.paintColor)
         self.history.append(cmd)
         cmd.execute()
+
 
 if __name__ == '__main__':
     application = tkinter.Tk()

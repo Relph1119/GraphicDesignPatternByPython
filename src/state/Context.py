@@ -1,18 +1,16 @@
-from abc import ABCMeta, abstractstaticmethod
+class Context(object):
+    @classmethod
+    def setClock(cls, hour):
+        raise NotImplementedError
 
-class Context(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def setClock(self, hour):
-        pass
+    @classmethod
+    def changeState(cls, state):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def changeState(self, state):
-        pass
+    @classmethod
+    def callSecurityCenter(cls, msg):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def callSecurityCenter(self, msg):
-        pass
-
-    @abstractstaticmethod
-    def recordLog(self, msg):
-        pass
+    @classmethod
+    def recordLog(cls, msg):
+        raise NotImplementedError

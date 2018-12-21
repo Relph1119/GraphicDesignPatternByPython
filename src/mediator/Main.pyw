@@ -1,5 +1,6 @@
 import tkinter
 
+
 class Main(tkinter.Frame):
 
     def __init__(self, parent):
@@ -9,8 +10,10 @@ class Main(tkinter.Frame):
 
         self.checkValue = tkinter.StringVar()
 
-        self.checkGuest = tkinter.Radiobutton(self, text="Guest", variable=self.checkValue, value="Guest", anchor=tkinter.W)
-        self.checkLogin = tkinter.Radiobutton(self, text="Login", variable=self.checkValue, value="Login", anchor=tkinter.W)
+        self.checkGuest = tkinter.Radiobutton(self, text="Guest", variable=self.checkValue, value="Guest",
+                                              anchor=tkinter.W)
+        self.checkLogin = tkinter.Radiobutton(self, text="Login", variable=self.checkValue, value="Login",
+                                              anchor=tkinter.W)
         usernameLabel = tkinter.Label(self, text="Username:", anchor=tkinter.W, underline=0)
         self.textUser = tkinter.Entry(self, width=10, state="disable")
         passwordLabel = tkinter.Label(self, text="Password:", anchor=tkinter.W, underline=0)
@@ -22,19 +25,19 @@ class Main(tkinter.Frame):
         self.checkLogin.deselect()
 
         self.checkGuest.grid(row=0, column=0, padx=2, pady=2,
-                            sticky=tkinter.W)
+                             sticky=tkinter.W)
         self.checkLogin.grid(row=0, column=1, padx=2, pady=2,
-                            sticky=tkinter.EW)
+                             sticky=tkinter.EW)
         usernameLabel.grid(row=1, column=0, padx=2, pady=2,
-                       sticky=tkinter.W)
+                           sticky=tkinter.W)
         self.textUser.grid(row=1, column=1, padx=2, pady=2,
-                       sticky=tkinter.EW)
+                           sticky=tkinter.EW)
         passwordLabel.grid(row=2, column=0, padx=2, pady=2,
-                        sticky=tkinter.W)
+                           sticky=tkinter.W)
         self.textPassword.grid(row=2, column=1, padx=2, pady=2,
-                        sticky=tkinter.EW)
+                               sticky=tkinter.EW)
         self.buttonOk.grid(row=3, column=0, padx=2, pady=2,
-                         sticky=tkinter.EW)
+                           sticky=tkinter.EW)
         self.buttonCancel.grid(row=3, column=1, padx=2, pady=2,
                                sticky=tkinter.EW)
 
@@ -69,10 +72,10 @@ class Main(tkinter.Frame):
     def quit(self, event=None):
         self.parent.destroy()
 
+
 if __name__ == '__main__':
     application = tkinter.Tk()
     application.title("Mediator Sample")
     window = Main(application)
     application.protocol("WM_DELETE_WINDOW", window.quit)
     application.mainloop()
-

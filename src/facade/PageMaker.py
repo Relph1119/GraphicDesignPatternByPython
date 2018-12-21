@@ -2,7 +2,8 @@ from facade.HtmlWriter import HtmlWriter
 from facade.Database import Database
 import time
 
-class PageMaker():
+
+class PageMaker:
 
     @staticmethod
     def makeWelcomePage(mailaddr, filename):

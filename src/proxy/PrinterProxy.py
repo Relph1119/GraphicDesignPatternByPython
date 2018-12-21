@@ -1,6 +1,7 @@
 from Printable import Printable
 from Printer import Printer
 
+
 class PrinterProxy(Printable):
 
     def __init__(self, name):

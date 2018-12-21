@@ -1,5 +1,6 @@
 from state.State import State
 
+
 class NightState(State):
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, '_instance'):

@@ -17,4 +17,3 @@ class ListVisitor(Visitor):
             for _, dir in enumerate(entry.dir):
                 dir.accept(self)
             self.currentdir = savedir
-

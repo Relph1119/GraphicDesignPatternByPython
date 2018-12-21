@@ -1,10 +1,8 @@
-from abc import ABCMeta, abstractclassmethod
+class Iterator(object):
+    @classmethod
+    def hasNext(cls):
+        raise NotImplementedError
 
-class Iterator(metaclass=ABCMeta):
-    @abstractclassmethod
-    def hasNext(self):
-        pass
-
-    @abstractclassmethod
-    def next(self):
-        pass
+    @classmethod
+    def next(cls):
+        raise NotImplementedError

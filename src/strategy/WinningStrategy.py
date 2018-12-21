@@ -2,6 +2,7 @@ from Strategy import Strategy
 import random
 from Hand import Hand
 
+
 class WinningStrategy(Strategy):
 
     def __init__(self, seed):
@@ -18,6 +19,3 @@ class WinningStrategy(Strategy):
 
     def study(self, win):
         self.won = win
-
-
-

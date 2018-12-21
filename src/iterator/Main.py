@@ -11,4 +11,3 @@ if __name__ == '__main__':
     while it.hasNext():
         book = it.next()
         print(book.name)
-

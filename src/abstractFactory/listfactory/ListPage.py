@@ -1,8 +1,9 @@
 from abstractFactory.factory.Page import Page
 
+
 class ListPage(Page):
     def __init__(self, title, author):
-        super(ListPage, self).__init__(title, author)
+        super().__init__(title, author)
 
     def makeHTML(self):
         buffer = ""

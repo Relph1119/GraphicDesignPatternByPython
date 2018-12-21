@@ -1,5 +1,3 @@
-from abc import ABCMeta, abstractstaticmethod
-
-class Border(metaclass=ABCMeta):
+class Border(object):
     def __init__(self, display):
         self.display = display

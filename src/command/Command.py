@@ -1,6 +1,5 @@
-from abc import ABCMeta, abstractstaticmethod
+class Command(object):
 
-class Command(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def execute(self):
+    @classmethod
+    def execute(cls):
         pass

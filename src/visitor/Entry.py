@@ -1,18 +1,18 @@
-from abc import ABCMeta, abstractstaticmethod
 from visitor.FileTreatMentException import FileTreatMentException
 
-class Entry(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def getName(self):
-        pass
 
-    @abstractstaticmethod
-    def getSize(self):
-        pass
+class Entry(object):
+    @classmethod
+    def getName(cls):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def accept(self, visitor):
-        pass
+    @classmethod
+    def getSize(cls):
+        raise NotImplementedError
+
+    @classmethod
+    def accept(cls, visitor):
+        raise NotImplementedError
 
     def add(self, entry):
         raise FileTreatMentException

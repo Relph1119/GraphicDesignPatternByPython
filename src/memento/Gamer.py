@@ -1,6 +1,7 @@
 from Memento import Memento
 import random
 
+
 class Gamer:
     def __init__(self, money):
         self.money = money

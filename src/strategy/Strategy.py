@@ -1,10 +1,8 @@
-from abc import ABCMeta, abstractstaticmethod
+class Strategy(object):
+    @classmethod
+    def nextHand(cls):
+        raise NotImplementedError
 
-class Strategy(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def nextHand(self):
-        pass
-
-    @abstractstaticmethod
-    def study(self, win):
-        pass
+    @classmethod
+    def study(cls, win):
+        raise NotImplementedError

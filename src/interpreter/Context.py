@@ -1,5 +1,6 @@
 from interpreter.PraseException import PraseException
 
+
 class Context:
     currentIndex = 0
     __currentToken = None
@@ -22,5 +23,3 @@ class Context:
         if token != self.__currentToken:
             raise PraseException("Warning: {0} is expected, but {1} is found.".format(token, self.__currentToken))
         self.nextToken()
-
-

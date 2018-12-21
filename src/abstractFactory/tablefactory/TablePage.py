@@ -1,5 +1,6 @@
 from abstractFactory.factory.Page import Page
 
+
 class TablePage(Page):
     def __init__(self, title, author):
         super(TablePage, self).__init__(title, author)
@@ -16,4 +17,3 @@ class TablePage(Page):
         buffer += "<hr><address>{0}</address>".format(self.author)
         buffer += "</body></html>\n"
         return buffer
-

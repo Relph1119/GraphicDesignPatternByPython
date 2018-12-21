@@ -1,5 +1,6 @@
 from Entry import Entry
 
+
 class Directory(Entry):
     def __init__(self, name):
         self.name = name
@@ -22,4 +23,3 @@ class Directory(Entry):
         for i in range(len(self.directory)):
             entry = self.directory[i]
             entry.printList("{0}/{1}".format(prefix, self.name))
-

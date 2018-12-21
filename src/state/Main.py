@@ -3,6 +3,7 @@ from state.SafeFrame import SafeFrame
 from threading import Timer
 import time
 
+
 def clockStart(window):
     while True:
         for i in range(24):
@@ -11,6 +12,7 @@ def clockStart(window):
                 time.sleep(1)
             else:
                 break
+
 
 if __name__ == '__main__':
     isRunning = True

@@ -1,6 +1,7 @@
 from interpreter.Node import Node
 from interpreter.PraseException import PraseException
 
+
 class PrimitiveCommandNode(Node):
     def __init__(self):
         self.name = ""

@@ -2,12 +2,13 @@ from Aggregate import Aggregate
 from Book import Book
 from BookShelfIterator import BookShelfIterator
 
+
 class BookShelf(Aggregate):
 
     last = 0
 
     def __init__(self, maxsize):
-        self.books = [0 for m in range(maxsize)]
+        self.books = [object for m in range(maxsize)]
 
     def get_book_at(self, index):
         return self.books[index]

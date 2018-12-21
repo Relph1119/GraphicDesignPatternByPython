@@ -1,5 +1,6 @@
 from Observer import Observer
 
+
 class GraphObserver(Observer):
     def update(self, generator):
         print("GraphObserver:", end='')

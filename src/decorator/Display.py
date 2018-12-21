@@ -1,17 +1,15 @@
-from abc import ABCMeta, abstractstaticmethod
+class Display(object):
+    @classmethod
+    def getColumns(cls):
+        raise NotImplementedError
 
-class Display(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def getColumns(self):
-        pass
+    @classmethod
+    def getRows(cls):
+        raise NotImplementedError
 
-    @abstractstaticmethod
-    def getRows(self):
-        pass
-
-    @abstractstaticmethod
-    def getRowText(self, row):
-        pass
+    @classmethod
+    def getRowText(cls, row):
+        raise NotImplementedError
 
     def show(self):
         for i in range(int(self.getRows())):

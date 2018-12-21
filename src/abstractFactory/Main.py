@@ -1,6 +1,7 @@
 import sys
 from abstractFactory.factory.Factory import Factory
 
+
 def main():
     if len(sys.argv) != 3:
         usage()
@@ -32,11 +33,13 @@ def main():
     page.add(traysearch)
     page.output()
 
+
 def usage():
     print("Usage: python {0} module.name class.name.of.ConcreteFactory".format(sys.argv[0]))
     print("Example 1: python Main.py abstractFactory.listfactory.ListFactory ListFactory")
     print("Example 1: python Main.py abstractFactory.tablefactory.TableFactory TableFactory")
     sys.exit(0)
+
 
 if __name__ == '__main__':
     main()

@@ -1,10 +1,8 @@
-from abc import ABCMeta, abstractclassmethod
-
-class Print(metaclass=ABCMeta):
-    @abstractclassmethod
-    def print_weak(self):
+class Print(object):
+    @classmethod
+    def print_weak(cls):
         pass
 
-    @abstractclassmethod
-    def print_strong(self):
+    @classmethod
+    def print_strong(cls):
         pass

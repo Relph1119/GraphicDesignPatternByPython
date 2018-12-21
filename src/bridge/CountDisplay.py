@@ -1,5 +1,6 @@
 from Display import Display
 
+
 class CountDisplay(Display):
 
     def multi_display(self, times):

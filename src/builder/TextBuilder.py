@@ -1,12 +1,13 @@
 from Builder import Builder
 
+
 class TextBuilder(Builder):
     def __init__(self):
         self.buffer = str()
 
     def makeTitle(self, title):
         self.buffer += "==============================\n"
-        self.buffer += " [ " + title +" ]\n"
+        self.buffer += " [ " + title + " ]\n"
         self.buffer += "\n"
 
     def makeString(self, str):

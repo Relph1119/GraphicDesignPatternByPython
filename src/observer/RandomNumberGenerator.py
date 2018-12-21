@@ -1,6 +1,7 @@
 from NumberGenerator import NumberGenerator
 import random
 
+
 class RandomNumberGenerator(NumberGenerator):
     def __init__(self):
         super().__init__()

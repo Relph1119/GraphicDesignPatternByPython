@@ -11,5 +11,5 @@ if __name__ == '__main__':
     b2.show()
     b3.show()
 
-    b4 = SideBorder(FullBorder(FullBorder(SideBorder(FullBorder(StringDisplay("你好，世界。")), '*'))),'/')
+    b4 = SideBorder(FullBorder(FullBorder(SideBorder(FullBorder(StringDisplay("你好，世界。")), '*'))), '/')
     b4.show()

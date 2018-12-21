@@ -1,6 +1,6 @@
-from abc import ABCMeta, abstractstaticmethod
+class Support(object):
+    nextSupport = None
 
-class Support(metaclass=ABCMeta):
     def __init__(self, name):
         self.name = name
 
@@ -11,20 +11,19 @@ class Support(metaclass=ABCMeta):
     def support(self, trouble):
         if self.resolve(trouble):
             self.done(trouble)
-        elif hasattr(self, "nextSupport") and not self.nextSupport is None:
+        elif hasattr(self, "nextSupport") and self.nextSupport is not None:
             self.nextSupport.support(trouble)
         else:
             self.fail(trouble)
 
-    def __str__(self):
-        return "[{0}]".format(self.name)
-
-    @abstractstaticmethod
-    def resolve(self, trouble):
+    @classmethod
+    def resolve(cls, trouble):
         pass
 
-    def done(self, trouble):
-        print("{0} is resolved by {1}".format(trouble, self))
+    @classmethod
+    def done(cls, trouble):
+        print("{0} is resolved by [{1}]".format(trouble, cls.__name__))
 
-    def fail(self, trouble):
+    @classmethod
+    def fail(cls, trouble):
         print("{0} cannot be resolved.".format(trouble))

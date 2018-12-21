@@ -1,21 +1,21 @@
-from abc import ABCMeta, abstractclassmethod
-
-class Item(metaclass=ABCMeta):
+class Item(object):
     def __init__(self, caption):
         self.caption = caption
 
-    @abstractclassmethod
-    def makeHTML(self):
-        pass
+    @classmethod
+    def makeHTML(cls):
+        raise NotImplementedError
+
 
 class Link(Item):
     def __init__(self, caption, url):
-        super(Link, self).__init__(caption)
+        super().__init__(caption)
         self.url = url
+
 
 class Tray(Item):
     def __init__(self, caption):
-        super(Tray, self).__init__(caption)
+        super().__init__(caption)
         self.tray = list()
 
     def add(self, item):

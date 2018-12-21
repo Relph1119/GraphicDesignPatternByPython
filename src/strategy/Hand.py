@@ -4,6 +4,7 @@ HANDVALUE_PAA = 2
 
 name = ["石头", "剪刀", "布"]
 
+
 class Hand:
     def __init__(self, handvalue):
         self.handvalue = handvalue
@@ -28,5 +29,6 @@ class Hand:
 
     def __str__(self):
         return name[self.handvalue]
+
 
 hand = [Hand(HANDVALUE_GUU), Hand(HANDVALUE_CHO), Hand(HANDVALUE_PAA)]

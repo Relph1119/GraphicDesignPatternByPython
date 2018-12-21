@@ -1,5 +1,6 @@
 from AbstractDisplay import AbstractDisplay
 
+
 class StringDisplay(AbstractDisplay):
     def __init__(self, name):
         self.name = name
@@ -19,5 +20,3 @@ class StringDisplay(AbstractDisplay):
         for i in range(self.width):
             print("-", end='')
         print("+")
-
-

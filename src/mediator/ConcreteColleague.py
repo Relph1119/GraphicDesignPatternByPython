@@ -1,6 +1,6 @@
 from mediator.Colleague import Colleague
 import tkinter
-from mediator.Mediator import Mediator
+
 
 class ColleagueButton(Colleague, tkinter.Button):
     def __init__(self, text, command=None):
@@ -15,8 +15,9 @@ class ColleagueButton(Colleague, tkinter.Button):
         else:
             self.button["state"] = "disable"
 
+
 class ColleagueRadiobutton(tkinter.Radiobutton, Colleague):
-    def __init__(self, master ,text, variable):
+    def __init__(self, master, text, variable):
         self.radiobutton = tkinter.Radiobutton(self, master, text=text, variable=variable, value=text, anchor=tkinter.W)
 
     def setMediator(self, mediator):
@@ -27,6 +28,7 @@ class ColleagueRadiobutton(tkinter.Radiobutton, Colleague):
             self.radiobutton.select()
         else:
             self.radiobutton.deselect()
+
 
 class ColleagueEntry(Colleague, tkinter.Entry):
     def __init__(self, width, show=None):
@@ -40,4 +42,3 @@ class ColleagueEntry(Colleague, tkinter.Entry):
             self.entry["state"] = "normal"
         else:
             self.entry["state"] = "disable"
-

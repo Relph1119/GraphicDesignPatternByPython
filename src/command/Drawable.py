@@ -1,6 +1,5 @@
-from abc import ABCMeta, abstractstaticmethod
+class Drawable(object):
 
-class Drawable(metaclass=ABCMeta):
-    @abstractstaticmethod
-    def draw(self):
+    @classmethod
+    def draw(cls):
         pass
